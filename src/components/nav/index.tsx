@@ -5,14 +5,13 @@ import { styles } from "./styles";
 export const Nav = styled(({ className }) => {
   return (
     <nav className={className}>
-      <Grid rows="10" cols="12">
-        <Item spanCol="1/span 12" spanRow="1/3">
-          item 1
-        </Item>
-        <Item spanCol="1/4" spanRow="3/6">
+      <Grid rows="10" cols={{ xs: "10", md: "5" }}>
+        {/* <Grid rows="10" cols="10"> */}
+        <Item gridCol={{ xs: "1/span 7", md: "1/span 5" }}>item 1</Item>
+        <Item gridCol="1/4" gridRow="3/6">
           item 2
         </Item>
-        <Item spanCol="4/6">item 3</Item>
+        <Item gridCol="4/6">item 3</Item>
         <Item>item 4</Item>
         <Item>item 5</Item>
         <Item>item 6</Item>
@@ -23,6 +22,9 @@ export const Nav = styled(({ className }) => {
         <Item>item 11</Item>
         <Item>item 12</Item>
         <Item>item 13</Item>
+        <Item>item 14</Item>
+        <Item>item 15</Item>
+        <Item>item 16</Item>
       </Grid>
     </nav>
   );

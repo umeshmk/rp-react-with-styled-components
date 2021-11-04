@@ -1,6 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-type content =
+type Media = {
+  xs?: string;
+  md?: string;
+  lg?: string;
+};
+
+/**
+ * GRID CONTAINER
+ */
+type Content =
   | "normal"
   | "center"
   | "start"
@@ -9,36 +18,172 @@ type content =
   | "space-between"
   | "space-around";
 
-// 12 COLUMN GRID , 13 lines
-// RESPONSIVE ???
+type MediaContent = {
+  xs?: Content;
+  md?: Content;
+  lg?: Content;
+};
 
-// Container
-export const Grid = styled.div<{
+interface Grid {
   rows?: string;
   cols?: string;
-  justifyContent?: content;
-  alignContent?: content;
+  justifyContent?: Content;
+  alignContent?: Content;
   gap?: string;
   rowGap?: string;
   colGap?: string;
-}>`
+}
+
+interface GridResponsive {
+  rows?: Media | string;
+  cols?: Media | string;
+  justifyContent?: MediaContent | Content;
+  alignContent?: MediaContent | Content;
+  gap?: Media | string;
+  rowGap?: Media | string;
+  colGap?: Media | string;
+}
+
+// RESPONSIVE
+const getGridCss = (p: Grid) => {
+  return css`
+    ${p.cols && `grid-template-columns: repeat(${p.cols}, 1fr);`}
+    ${p.rows && `grid-template-rows: repeat(${p.rows}, 1fr);`}
+    ${p.gap && `grid-gap: ${p.gap};`}
+    ${p.rowGap && `row-gap: ${p.rowGap};`}
+    ${p.colGap && `col-gap: ${p.colGap};`} 
+    ${p.justifyContent && `justify-content:${p.justifyContent};`}
+    ${p.alignContent && `align-content:${p.alignContent};`}
+  `;
+};
+
+// Container
+export const Grid = styled.div<GridResponsive>`
   display: grid;
 
-  /* template */
-  grid-template-columns: repeat(${(p) => p.cols || 1}, 1fr);
-  grid-template-rows: repeat(${(p) => p.rows || 1}, 1fr);
-  /* content */
-  justify-content: ${(p) => p.justifyContent || "normal"};
-  align-content: ${(p) => p.alignContent || "normal"};
-  /* gap */
-  grid-gap: ${(p) => p.gap || "0 0"};
-  row-gap: ${(p) => p.rowGap || "0"};
-  column-gap: ${(p) => p.colGap || "0"};
+  // all media
+  ${(p) =>
+    getGridCss({
+      rows: typeof p.rows === "string" ? p.rows : undefined,
+      cols: typeof p.cols === "string" ? p.cols : undefined,
+      justifyContent:
+        typeof p.justifyContent === "string" ? p.justifyContent : undefined,
+      alignContent:
+        typeof p.alignContent === "string" ? p.alignContent : undefined,
+      gap: typeof p.gap === "string" ? p.gap : undefined,
+      colGap: typeof p.colGap === "string" ? p.colGap : undefined,
+      rowGap: typeof p.rowGap === "string" ? p.rowGap : undefined,
+    })}
+
+  // media - xs
+  ${(p) => p.theme.media.xs} {
+    ${(p) =>
+      getGridCss({
+        rows: typeof p.rows === "object" ? p.rows.xs : undefined,
+        cols: typeof p.cols === "object" ? p.cols.xs : undefined,
+        justifyContent:
+          typeof p.justifyContent === "object"
+            ? p.justifyContent.xs
+            : undefined,
+        alignContent:
+          typeof p.alignContent === "object" ? p.alignContent.xs : undefined,
+        gap: typeof p.gap === "object" ? p.gap.xs : undefined,
+        colGap: typeof p.colGap === "object" ? p.colGap.xs : undefined,
+        rowGap: typeof p.rowGap === "object" ? p.rowGap.xs : undefined,
+      })}
+  }
+
+  // media - md
+  ${(p) => p.theme.media.md} {
+    ${(p) =>
+      getGridCss({
+        rows: typeof p.rows === "object" ? p.rows.md : undefined,
+        cols: typeof p.cols === "object" ? p.cols.md : undefined,
+        justifyContent:
+          typeof p.justifyContent === "object"
+            ? p.justifyContent.md
+            : undefined,
+        alignContent:
+          typeof p.alignContent === "object" ? p.alignContent.md : undefined,
+        gap: typeof p.gap === "object" ? p.gap.md : undefined,
+        colGap: typeof p.colGap === "object" ? p.colGap.md : undefined,
+        rowGap: typeof p.rowGap === "object" ? p.rowGap.md : undefined,
+      })}
+  }
+
+  // media - lg
+  ${(p) => p.theme.media.lg} {
+    ${(p) =>
+      getGridCss({
+        rows: typeof p.rows === "object" ? p.rows.lg : undefined,
+        cols: typeof p.cols === "object" ? p.cols.lg : undefined,
+        justifyContent:
+          typeof p.justifyContent === "object"
+            ? p.justifyContent.lg
+            : undefined,
+        alignContent:
+          typeof p.alignContent === "object" ? p.alignContent.lg : undefined,
+        gap: typeof p.gap === "object" ? p.gap.lg : undefined,
+        colGap: typeof p.colGap === "object" ? p.colGap.lg : undefined,
+        rowGap: typeof p.rowGap === "object" ? p.rowGap.lg : undefined,
+      })}
+  }
 `;
 
+/**
+ * GRID ITEM
+ */
+type Item = {
+  gridCol?: string;
+  gridRow?: string;
+};
+
+type ItemResponsive = {
+  gridCol?: string | Media;
+  gridRow?: string | Media;
+};
+const getItemCss = (p: Item) => {
+  return css`
+    ${p.gridCol && `grid-column: ${p.gridCol};`}
+    ${p.gridRow && `grid-row: ${p.gridRow};`}
+  `;
+};
+
 // Item
-export const Item = styled.div<{ spanCol?: string; spanRow?: string }>`
-  /* border: 1px solid; */
-  grid-row: ${(p) => p.spanRow};
-  grid-column: ${(p) => p.spanCol};
+export const Item = styled.div<ItemResponsive>`
+  border: 1px solid;
+
+  // all media
+  ${(p) =>
+    getItemCss({
+      gridCol: typeof p.gridCol === "string" ? p.gridCol : undefined,
+      gridRow: typeof p.gridRow === "string" ? p.gridRow : undefined,
+    })}
+
+  // media - xs
+  ${(p) => p.theme.media.xs} {
+    ${(p) =>
+      getItemCss({
+        gridCol: typeof p.gridCol === "object" ? p.gridCol.xs : undefined,
+        gridRow: typeof p.gridRow === "object" ? p.gridRow.xs : undefined,
+      })}
+  }
+
+  // media - md
+  ${(p) => p.theme.media.md} {
+    ${(p) =>
+      getItemCss({
+        gridCol: typeof p.gridCol === "object" ? p.gridCol.md : undefined,
+        gridRow: typeof p.gridRow === "object" ? p.gridRow.md : undefined,
+      })}
+  }
+
+  // media - lg
+  ${(p) => p.theme.media.lg} {
+    ${(p) =>
+      getItemCss({
+        gridCol: typeof p.gridCol === "object" ? p.gridCol.lg : undefined,
+        gridRow: typeof p.gridRow === "object" ? p.gridRow.lg : undefined,
+      })}
+  }
 `;
