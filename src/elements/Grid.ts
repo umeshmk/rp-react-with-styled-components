@@ -150,9 +150,7 @@ const getItemCss = (p: Item) => {
 };
 
 // Item
-export const Item = styled.div<ItemResponsive>`
-  border: 1px solid;
-
+export const GridItem = styled.div<ItemResponsive>`
   // all media
   ${(p) =>
     getItemCss({
