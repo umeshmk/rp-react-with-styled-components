@@ -6,8 +6,11 @@ import styled, { css } from "styled-components";
  * Styles
  */
 export const styles = css`
-  padding: 0.75rem 1rem;
-  background-color: aliceblue;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
   .logo {
     z-index: 200;
   }
@@ -24,7 +27,7 @@ export const styles = css`
  * Logo
  */
 export const Logo = styled(Link)`
-  color: red;
+  color: #fff;
   font-size: 2rem;
   margin: 0;
   padding-left: 1rem;
@@ -39,6 +42,7 @@ export const LogoIcon = styled.img`
  */
 export const LinksIcon = styled(GoThreeBars)`
   cursor: pointer;
+  color: #fff;
 
   ${(p) => p.theme.media.md} {
     display: none;
@@ -47,14 +51,14 @@ export const LinksIcon = styled(GoThreeBars)`
 
 export const NavLink = styled(Link)`
   display: none;
-  color: #333;
-  margin-right: 1rem;
+  color: #fffa;
+  margin-left: 3rem;
   font-size: 1.1rem;
   text-decoration: none;
   text-transform: capitalize;
-  transition: color 0.3s;
+  transition: color 0.1s;
   :hover {
-    color: crimson;
+    color: #fff;
   }
 
   ${(p) => p.theme.media.md} {
@@ -64,11 +68,11 @@ export const NavLink = styled(Link)`
 
 export const ModalLink = styled(Link)`
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 1.5rem;
   text-decoration: none;
   text-transform: capitalize;
-  transition: color 0.3s;
+  transition: color 0.2s;
   :hover {
     color: crimson;
   }

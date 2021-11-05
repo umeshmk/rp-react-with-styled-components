@@ -11,5 +11,10 @@ declare module "styled-components" {
       md: string;
       lg: string;
     };
+    maxWidth: {
+      xs: string;
+      md: string;
+      lg: string;
+    };
   }
 }

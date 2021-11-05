@@ -1,5 +1,6 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import { Nav } from "../components/nav";
+import { Nav } from "../components/nav/Nav";
+import { HomePage } from "./HomePage";
 
 export const Pages = () => {
   return (
@@ -8,7 +9,9 @@ export const Pages = () => {
       <BrowserRouter>
         <Nav />
         <Switch>
-          <Route path="/">{/* Homepage */}</Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
           <Route path="*">
             <Redirect to="/" />
           </Route>

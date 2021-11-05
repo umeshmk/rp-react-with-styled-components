@@ -7,6 +7,11 @@ export const theme: DefaultTheme = {
   },
 
   // Breakpoints - from mui
+  maxWidth: {
+    xs: "900px",
+    md: "1536px",
+    lg: "100%",
+  },
   media: {
     xs: "@media all and (min-width: 0px)",
     md: "@media all and (min-width: 900px)",
