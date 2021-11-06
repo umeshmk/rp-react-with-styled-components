@@ -1,4 +1,16 @@
-const heroOne = {
+export type HeroType = {
+  reversePosition: boolean;
+  inverseColor: boolean;
+  topText: string;
+  title: string;
+  description: string;
+  buttonLabel: string;
+  imgStart: string;
+  img: string;
+  start: boolean;
+};
+
+const heroOne: HeroType = {
   reversePosition: false,
   inverseColor: true,
   topText: "Founded in 2012",
@@ -8,10 +20,10 @@ const heroOne = {
   buttonLabel: "Find More",
   imgStart: "start",
   img: "/assets/svg/Deal.svg",
-  start: "true",
+  start: true,
 };
 
-const heroTwo = {
+const heroTwo: HeroType = {
   reversePosition: true,
   inverseColor: false,
   topText: "Designed & Developed",
@@ -21,10 +33,10 @@ const heroTwo = {
   // linkTo: "/more",
   imgStart: "start",
   img: "/assets/svg/Connection.svg",
-  start: "true",
+  start: true,
 };
 
-const heroThree = {
+const heroThree: HeroType = {
   reversePosition: false,
   inverseColor: true,
   topText: "Highly reputed brand",
@@ -35,7 +47,7 @@ const heroThree = {
   // linkTo: "/download",
   imgStart: "",
   img: "/assets/svg/ChartUp.svg",
-  start: "true",
+  start: true,
 };
 
 export const data = [heroOne, heroTwo, heroThree];

@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Button } from "../../elements";
 
 /**
  * Styles
  */
-export const styles = css``;
+// export const styles = css``;
 
 export const HeroBox = styled.div<{ inverse: boolean }>`
   background-color: ${(p) => (p.inverse ? "#fff" : "#071c2f")};
@@ -51,8 +51,12 @@ export const HeroButton = styled(Button)<{ inverse: boolean }>`
 export const HeroImg = styled.img`
   height: 40vh;
   width: 80vw;
+  transition: transform 0.4s;
   ${(p) => p.theme.media.md} {
     height: 40vh;
     width: 40vw;
+  }
+  :hover {
+    transform: rotate(-7deg);
   }
 `;
