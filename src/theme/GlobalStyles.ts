@@ -6,5 +6,6 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
   body {
       /* css */
+    font-family: "Roboto";
   }
 `;
