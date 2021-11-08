@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { SFC } from "../../types";
 
 type Media<T> = {
   xs?: T;
@@ -66,7 +67,13 @@ const getFlexCss = (p: Flex) => {
   `;
 };
 
-export const Flex = styled.div<FlexResponsive>`
+// Use Body instead of .div else we see direction="[Object Object]" in chrome devtools
+// export const Flex = styled.div<FlexResponsive>`
+const Body: SFC<FlexResponsive> = ({ className, children }) => {
+  return <div className={className}>{children}</div>;
+};
+
+export const Flex = styled(Body)`
   display: flex;
 
   /* all media */

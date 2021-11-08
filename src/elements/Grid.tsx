@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { SFC } from "../types";
 
 type Media = {
   xs?: string;
@@ -58,7 +59,12 @@ const getGridCss = (p: Grid) => {
 };
 
 // Container
-export const Grid = styled.div<GridResponsive>`
+// export const Grid = styled.div<GridResponsive>`
+const Body: SFC<GridResponsive> = ({ className, children }) => {
+  return <div className={className}>{children}</div>;
+};
+
+export const Grid = styled(Body)`
   display: grid;
 
   // all media
@@ -150,7 +156,12 @@ const getItemCss = (p: Item) => {
 };
 
 // Item
-export const GridItem = styled.div<ItemResponsive>`
+// export const GridItem = styled.div<ItemResponsive>`
+const ItemBody: SFC<ItemResponsive> = ({ className, children }) => {
+  return <div className={className}>{children}</div>;
+};
+
+export const GridItem = styled(ItemBody)`
   // all media
   ${(p) =>
     getItemCss({

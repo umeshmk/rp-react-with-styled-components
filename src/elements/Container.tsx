@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SFC } from "../types";
 
 type Media<T> = {
   xs?: T;
@@ -8,7 +9,12 @@ type Media<T> = {
 type Size = "xs" | "md" | "lg";
 type SizeResponsive = { maxWidth?: Size | Media<Size> };
 
-export const Container = styled.section<SizeResponsive>`
+// export const Container = styled.section<SizeResponsive>`
+const Body: SFC<SizeResponsive> = ({ className, children }) => {
+  return <section className={className}>{children}</section>;
+};
+
+export const Container = styled(Body)`
   margin: 0 auto;
 
   // all media

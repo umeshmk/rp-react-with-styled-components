@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { SFC } from "../../types";
 
 type Media<T> = {
   xs?: T;
@@ -44,7 +45,12 @@ const getItemCss = (p: Item) => {
   `;
 };
 
-export const Item = styled.div<ItemResponsive>`
+// export const Item = styled.div<ItemResponsive>`
+const Body: SFC<ItemResponsive> = ({ className, children }) => {
+  return <div className={className}>{children}</div>;
+};
+
+export const Item = styled(Body)`
   /* all media */
   ${(p) =>
     getItemCss({

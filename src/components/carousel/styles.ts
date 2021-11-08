@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import styled, { css } from "styled-components";
-import { Flex } from "../../elements";
+import { Button, Flex } from "../../elements";
 
 export const styles = css`
   ${(p) => p.theme.media.xs} {
@@ -22,8 +22,9 @@ export const Title = styled.h2`
 export const SlickItem = styled(Flex)`
   height: 30rem;
   padding: 1rem;
-  > div {
-    height: 100%;
+  overflow: hidden;
+  > div:first-child {
+    height: 27rem;
     border: 1px solid #0003;
     border-radius: 1rem 1rem 0 0;
     overflow: hidden;
@@ -32,7 +33,7 @@ export const SlickItem = styled(Flex)`
 
 export const SlickItemImg = styled.img`
   width: 100%;
-  height: 30vh;
+  height: 60%;
   object-fit: cover;
 `;
 
@@ -41,6 +42,23 @@ export const SlickItemText = styled.div`
   color: #555;
   h3 {
     color: rebeccapurple;
+    text-align: center;
+  }
+`;
+
+export const LearnButton = styled(Button)`
+  padding: 1rem;
+  background-color: rebeccapurple;
+  color: #fff;
+  width: 100%;
+  border-radius: 0 0 1rem 1rem;
+  :hover {
+    background-color: rebeccapurple;
+    opacity: 0.85;
+    color: #fff;
+  }
+  :active {
+    opacity: 1;
   }
 `;
 

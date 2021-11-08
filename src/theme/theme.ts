@@ -13,8 +13,8 @@ export const theme: DefaultTheme = {
     lg: "100%",
   },
   media: {
-    xs: "@media all and (min-width: 0px)",
-    md: "@media all and (min-width: 900px)",
+    xs: "@media all and (min-width: 0px)", // only min-width, since it must scale upwards to all higher widths
+    md: "@media all and (min-width: 900px)", // we must ensure the order in css as (xs -> md -> lg) and not reversed
     lg: "@media all and (min-width: 1536px)",
   },
 };
