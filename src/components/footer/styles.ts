@@ -18,8 +18,9 @@ export const LinksGroup = styled(Flex)`
 `;
 
 export const Links = styled.ul`
-  color: #ddd;
+  color: #999;
   font-size: 1.1rem;
+  font-weight: 300;
   list-style: none;
   padding: 0;
   li {

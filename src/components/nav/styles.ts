@@ -49,31 +49,35 @@ export const LinksIcon = styled(GoThreeBars)`
   }
 `;
 
-export const NavLink = styled(Link)`
-  display: none;
-  color: #fffa;
-  margin-left: 3rem;
-  font-size: 1.1rem;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: color 0.1s;
-  :hover {
-    color: #fff;
-  }
+export const NavLink = styled.div`
+  a {
+    display: none;
+    color: #fffa;
+    margin-left: 3rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: color 0.1s;
+    :hover {
+      color: #fff;
+    }
 
-  ${(p) => p.theme.media.md} {
-    display: initial;
+    ${(p) => p.theme.media.md} {
+      display: initial;
+    }
   }
 `;
 
-export const ModalLink = styled(Link)`
-  color: #fff;
-  font-size: 1.6rem;
-  padding: 1.5rem;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: color 0.2s;
-  :hover {
-    color: crimson;
+export const ModalLink = styled.div`
+  padding-bottom: 5rem;
+  a {
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: color 0.2s;
+    :hover {
+      color: #fffa;
+    }
   }
 `;

@@ -4,7 +4,8 @@ import { createGlobalStyle } from "styled-components";
 // We have used modern-normalize.css Cdn in .html
 
 export const GlobalStyles = createGlobalStyle`
-  body {
+html{scroll-behavior:smooth}
+body {
       /* css */
     font-family: "Roboto";
   }
