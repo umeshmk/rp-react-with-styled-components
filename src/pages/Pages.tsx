@@ -1,6 +1,7 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { Footer } from "../components/footer/Footer";
 import { Nav } from "../components/nav/Nav";
+import { ContactPage } from "./ContactPage";
 import { HomePage } from "./HomePage";
 import { PricingPage } from "./PricingPage";
 
@@ -12,6 +13,9 @@ export const Pages = () => {
         <Switch>
           <Route exact path="/pricing">
             <PricingPage />
+          </Route>
+          <Route exact path="/signup">
+            <ContactPage />
           </Route>
           <Route exact path="/">
             <HomePage />
