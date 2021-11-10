@@ -40,7 +40,7 @@ export const Pricing = styled(({ className }) => {
                   ))}
                 </CardFeatures>
               </Item>
-              <CardButton>Get Started</CardButton>
+              <CardButton to="/signup">Get Started</CardButton>
             </Card>
           ))}
         </Grid>

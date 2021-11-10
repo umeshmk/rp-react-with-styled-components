@@ -19,9 +19,11 @@
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.3.0",
     "react-slick": "^0.28.1",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "tinycolor2": "^1.4.2"
   },
   "devDependencies": {
+    "@types/tinycolor2": "^1.4.3",
     "@types/joi": "^17.2.3",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",

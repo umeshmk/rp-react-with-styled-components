@@ -4,6 +4,7 @@ import { Container, Flex } from "../../elements";
 import { data, Inputs } from "./data";
 import {
   Form,
+  IconSuccess,
   Input,
   InputSubmit,
   styles,
@@ -36,7 +37,10 @@ export const Contact = styled(({ className }) => {
 
         <Form onSubmit={handleSubmit(onSubmit)}>
           {isSubmitSuccessful && (
-            <TextSuccess>Your Request is Submitted successfully</TextSuccess>
+            <Flex direction="column" alignItems="center">
+              <IconSuccess size="4rem" />
+              <TextSuccess>Submitted</TextSuccess>
+            </Flex>
           )}
           <br />
           {data.map(({ name, placeholder, type }) => (

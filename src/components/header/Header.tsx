@@ -26,8 +26,8 @@ export const Header = styled(({ className }) => {
             We provide the best security systems for clients all over the world
           </HeaderPara>
           <Item>
-            <HeaderButton>Get Started</HeaderButton>
-            <HeaderButton>Find More</HeaderButton>
+            <HeaderButton to="/signup">Get Started</HeaderButton>
+            <HeaderButton to="/pricing">Find More</HeaderButton>
           </Item>
         </Flex>
       </Container>

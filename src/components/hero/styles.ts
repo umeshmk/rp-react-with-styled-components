@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Button } from "../../elements";
 
@@ -8,8 +7,9 @@ import { Button } from "../../elements";
 // export const styles = css``;
 
 export const HeroBox = styled.div<{ inverse: boolean }>`
-  background-color: ${(p) => (p.inverse ? "#fff" : "#071c2f")};
-  color: ${(p) => (p.inverse ? "#fff" : "#000")};
+  background-color: ${(p) =>
+    p.inverse ? p.theme.colors.grey[50] : p.theme.colors.primary.dark};
+
   section {
     padding: 10rem 1rem;
     text-align: center;
@@ -20,32 +20,46 @@ export const HeroBox = styled.div<{ inverse: boolean }>`
   }
   small {
     font-weight: 800;
-    color: #999;
+    color: ${(p) =>
+      p.inverse ? p.theme.colors.primary.dark : p.theme.colors.grey[50]};
     font-size: 1rem;
   }
   p {
     font-weight: 400;
-    color: #999;
+    color: ${(p) =>
+      p.inverse ? p.theme.colors.grey[800] : p.theme.colors.grey[400]};
+    letter-spacing: 1px;
     font-size: 1.1rem;
+    /* text-align: justify; */
   }
 `;
 
-export const HeroTitle = styled.h2`
+export const HeroTitle = styled.h2<{ inverse: boolean }>`
   font-weight: 800;
-  color: slateblue;
+  color: ${(p) =>
+    p.inverse ? p.theme.colors.primary.main : p.theme.colors.grey[50]};
+
   font-size: 2.5rem;
+  font-size: clamp(2rem, 10vw, 3.2rem);
   margin: 2rem 0 0;
 `;
 
 export const HeroButton = styled(Button)<{ inverse: boolean }>`
-  border: 1px solid slateblue;
-  color: slateblue;
-  background: transparent;
+  border: 1px solid transparent;
+  color: ${(p) =>
+    !p.inverse ? p.theme.colors.primary.dark : p.theme.colors.grey[50]};
+  background: ${(p) =>
+    p.inverse ? p.theme.colors.primary.dark : p.theme.colors.grey[50]};
+
   padding: 1rem;
   margin-top: 1.5rem;
   :hover {
-    background: transparent;
-    color: ${(p) => (p.inverse ? "000" : "#fff")};
+    color: ${(p) =>
+      p.inverse ? p.theme.colors.primary.dark : p.theme.colors.grey[50]};
+    border-color: ${(p) =>
+      p.inverse ? p.theme.colors.primary.dark : p.theme.colors.grey[50]};
+    background: ${(p) =>
+      !p.inverse ? p.theme.colors.primary.dark : p.theme.colors.grey[50]};
   }
 `;
 

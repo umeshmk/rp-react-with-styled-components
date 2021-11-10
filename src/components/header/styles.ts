@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
-import { Button } from "../../elements";
+import { LinkButton } from "../../elements";
 
 /**
  * Styles
  */
 export const styles = css`
   height: 100vh;
-  color: #fff;
+  color: ${(p) => p.theme.colors.grey[50]};
   padding: 0 2rem;
 
   section {
@@ -35,12 +35,16 @@ export const HeaderTitle = styled.h1`
   font-size: clamp(2.3rem, 6vw, 4.5rem);
   text-transform: capitalize;
   margin: 0;
+  letter-spacing: 4px;
+  word-spacing: 7px;
+  /* text-align: justify; */
 `;
 
 export const HeaderPara = styled.p`
-  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  text-transform: capitalize;
+  /* font-weight: 300; */
+  color: ${(p) => p.theme.colors.grey[500]};
 
   /* media - xs */
   ${(p) => p.theme.media.xs} {
@@ -53,14 +57,7 @@ export const HeaderPara = styled.p`
   }
 `;
 
-export const HeaderButton = styled(Button)`
-  background-color: transparent;
-  color: #fff;
+export const HeaderButton = styled(LinkButton)`
   padding: 0.8rem;
   margin: auto 1rem;
-
-  :hover {
-    background-color: #fff;
-    color: #000;
-  }
 `;

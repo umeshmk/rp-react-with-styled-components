@@ -17,6 +17,13 @@ export const styles = css`
 export const Title = styled.h2`
   font-size: 4rem;
   margin: 2rem auto;
+  color: ${(p) => p.theme.colors.primary.main};
+  ${(p) => p.theme.media.xs} {
+    text-align: center;
+  }
+  ${(p) => p.theme.media.md} {
+    text-align: left;
+  }
 `;
 
 export const SlickItem = styled(Flex)`
@@ -39,23 +46,27 @@ export const SlickItemImg = styled.img`
 
 export const SlickItemText = styled.div`
   padding: 1rem;
-  color: #555;
   h3 {
-    color: rebeccapurple;
+    color: ${(p) => p.theme.colors.primary.dark};
     text-align: center;
+  }
+  p {
+    color: ${(p) => p.theme.colors.grey[800]};
+    /* letter-spacing: 1px; */
+    font-weight: 300;
+    text-align: justify;
   }
 `;
 
 export const LearnButton = styled(Button)`
   padding: 1rem;
-  background-color: rebeccapurple;
-  color: #fff;
+  color: ${(p) => p.theme.colors.primary.light};
+  background-color: ${(p) => p.theme.colors.primary.dark};
   width: 100%;
   border-radius: 0 0 1rem 1rem;
   :hover {
-    background-color: rebeccapurple;
-    opacity: 0.85;
-    color: #fff;
+    color: ${(p) => p.theme.colors.primary.light};
+    opacity: 0.9;
   }
   :active {
     opacity: 1;
@@ -71,7 +82,7 @@ export const Controls = styled(Flex)`
     padding-bottom: 0rem;
   }
   svg {
-    color: rebeccapurple;
+    color: ${(p) => p.theme.colors.primary.dark};
     cursor: pointer;
     font-size: 3rem;
     margin: auto 1rem;

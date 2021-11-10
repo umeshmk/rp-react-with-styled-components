@@ -66,7 +66,7 @@ export const Hero: React.FC<{ data: HeroType }> = ({ data }) => {
                 justifyContent={{ md: "center" }}
               >
                 <small>{topText}</small>
-                <HeroTitle>{title}</HeroTitle>
+                <HeroTitle inverse={inverseColor}>{title}</HeroTitle>
                 <p>{description}</p>
                 <HeroButton inverse={inverseColor}>{buttonLabel}</HeroButton>
               </Flex>

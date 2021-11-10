@@ -1,0 +1,24 @@
+// background-color: ${(props) => props.theme.color.primary};;
+
+{
+  "$theme": {
+    "scope": "css",
+    "prefix": "$p - theme",
+    "body": "${(p) => p.theme.${0}};"
+  },
+  "$colors": {
+    "scope": "css",
+    "prefix": "$p - colors",
+    "body": "${(p) => p.theme.colors.${0}};"
+  },
+  "$primary": {
+    "scope": "css",
+    "prefix": "$p - primary",
+    "body": "${(p) => p.theme.colors.primary.${0}};"
+  },
+  "$grey": {
+    "scope": "css",
+    "prefix": "$p - grey",
+    "body": "${(p) => p.theme.colors.grey[${0}]};"
+  }
+}

@@ -15,10 +15,10 @@ export const styles = css`
     z-index: 200;
   }
   .modal {
-    background-color: #071c2f;
+    background-color: ${(p) => p.theme.colors.primary.dark};
     padding-top: 30vh;
     .close {
-      color: #fff;
+      color: ${(p) => p.theme.colors.grey[50]};
     }
   }
 `;
@@ -27,8 +27,9 @@ export const styles = css`
  * Logo
  */
 export const Logo = styled(Link)`
-  color: #fff;
+  color: ${(p) => p.theme.colors.grey[50]};
   font-size: 2rem;
+  font-weight: 300;
   margin: 0;
   padding-left: 1rem;
   text-decoration: none;
@@ -42,8 +43,7 @@ export const LogoIcon = styled.img`
  */
 export const LinksIcon = styled(GoThreeBars)`
   cursor: pointer;
-  color: #fff;
-
+  color: ${(p) => p.theme.colors.grey[50]};
   ${(p) => p.theme.media.md} {
     display: none;
   }
@@ -52,14 +52,14 @@ export const LinksIcon = styled(GoThreeBars)`
 export const NavLink = styled.div`
   a {
     display: none;
-    color: #fffa;
+    color: ${(p) => p.theme.colors.grey[300]};
     margin-left: 3rem;
     font-size: 1.1rem;
     text-decoration: none;
     text-transform: capitalize;
     transition: color 0.1s;
     :hover {
-      color: #fff;
+      color: ${(p) => p.theme.colors.grey[200]};
     }
 
     ${(p) => p.theme.media.md} {
@@ -71,13 +71,14 @@ export const NavLink = styled.div`
 export const ModalLink = styled.div`
   padding-bottom: 5rem;
   a {
-    color: #fff;
+    color: ${(p) => p.theme.colors.grey[300]};
     font-size: 1.6rem;
+    font-weight: 600;
     text-decoration: none;
     text-transform: capitalize;
     transition: color 0.2s;
     :hover {
-      color: #fffa;
+      color: ${(p) => p.theme.colors.grey[50]};
     }
   }
 `;

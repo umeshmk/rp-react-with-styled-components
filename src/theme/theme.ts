@@ -1,11 +1,17 @@
 import { DefaultTheme } from "styled-components";
+import { grey, lightBlue } from "./materialColors";
 
 export const theme: DefaultTheme = {
   colors: {
-    primary: "rebeccapurple",
-    secondary: "green",
+    black: "#000000",
+    white: "#ffffff",
+    grey: grey,
+    primary: {
+      light: lightBlue[300],
+      main: lightBlue[500],
+      dark: lightBlue[900],
+    },
   },
-
   // Breakpoints - from mui
   maxWidth: {
     xs: "900px",
