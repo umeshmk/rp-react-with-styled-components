@@ -4,6 +4,7 @@ import ReactSlickClass from "react-slick";
 import styled from "styled-components";
 import { Container, Grid, GridItem, Item } from "../../elements";
 import { data, sliderSettings } from "./data";
+import "./slick.min.css";
 import {
   Controls,
   LearnButton,
@@ -14,7 +15,6 @@ import {
   styles,
   Title,
 } from "./styles";
-import "./styles.css";
 
 export const Carousel = styled(({ className }) => {
   const [sliderRef, setSliderRef] = useState<ReactSlickClass | null>(null);
@@ -48,7 +48,6 @@ export const Carousel = styled(({ className }) => {
                   <h3>{title}</h3>
                   <p>{description}</p>
                 </SlickItemText>
-                {/* <LearnButton>Learn More</LearnButton> */}
               </Item>
               <Item>
                 <LearnButton>Learn More</LearnButton>

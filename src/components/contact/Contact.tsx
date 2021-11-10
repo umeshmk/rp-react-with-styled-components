@@ -28,8 +28,6 @@ export const Contact = styled(({ className }) => {
     reset();
   };
 
-  console.log(errors);
-
   return (
     <Flex className={className} justifyContent="center">
       <Container maxWidth="xs">

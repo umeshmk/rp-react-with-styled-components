@@ -1,3 +1,5 @@
+import { url } from "../../utility/url";
+
 export type HeroType = {
   reversePosition: boolean;
   inverseColor: boolean;
@@ -19,7 +21,7 @@ const heroOne: HeroType = {
     "We have designed and implemented the best cloud security solutions",
   buttonLabel: "Find More",
   imgStart: "start",
-  img: "/assets/svg/Deal.svg",
+  img: url("assets/svg/Deal.svg"),
   start: true,
 };
 
@@ -32,7 +34,7 @@ const heroTwo: HeroType = {
   buttonLabel: "View Project",
   // linkTo: "/more",
   imgStart: "start",
-  img: "/assets/svg/Connection.svg",
+  img: url("assets/svg/Connection.svg"),
   start: true,
 };
 
@@ -46,7 +48,7 @@ const heroThree: HeroType = {
   buttonLabel: "View Project",
   // linkTo: "/download",
   imgStart: "",
-  img: "/assets/svg/ChartUp.svg",
+  img: url("assets/svg/ChartUp.svg"),
   start: true,
 };
 

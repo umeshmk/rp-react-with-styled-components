@@ -11,7 +11,7 @@ const PricingPage = React.lazy(() => import("./PricingPage"));
 export const Pages = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Nav />
         <Suspense fallback={<LoadingIcon />}>
           <Switch>

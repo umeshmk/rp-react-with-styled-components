@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container, Flex, Modal } from "../../elements";
+import { url } from "../../utility/url";
 import {
   LinksIcon,
   Logo,
@@ -13,13 +14,13 @@ import {
 
 const links = [
   {
-    to: "/",
+    to: url("/"), // url() since it's <a> for hash
     hash: "#about",
     text: "About",
     id: "about",
   },
   {
-    to: "/pricing",
+    to: "/pricing", // url() not needed since it will use router
     hash: "",
     text: "Pricing",
     id: "pricing",
@@ -43,7 +44,7 @@ export const Nav = styled(({ className }) => {
         {/* Navbar */}
         <Flex justifyContent="space-between" alignItems="center">
           <Flex className="logo" alignItems="center">
-            <LogoIcon src="/assets/logo.png" alt="logo" />
+            <LogoIcon src={url("assets/logo.png")} alt="logo" />
             <Logo to="/">Delta</Logo>
           </Flex>
 

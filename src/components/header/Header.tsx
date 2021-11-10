@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Button, Container, Flex, Item } from "../../elements";
+import { Container, Flex, Item } from "../../elements";
+import { url } from "../../utility/url";
 import {
   BackgroundVideo,
   HeaderButton,
@@ -11,7 +12,7 @@ import {
 export const Header = styled(({ className }) => {
   return (
     <header className={className}>
-      <BackgroundVideo src="/assets/hero.mp4" autoPlay muted loop />
+      <BackgroundVideo src={url("assets/hero.mp4")} autoPlay muted loop />
       <Container maxWidth="md">
         <Flex
           className="content"

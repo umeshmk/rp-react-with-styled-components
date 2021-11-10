@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container, Flex, Grid, GridItem } from "../../elements";
+import { url } from "../../utility/url";
 import { Logo, LogoIcon } from "../nav/styles";
 import { data, dataSocial } from "./data";
 import { Address, Links, LinksGroup, SocialIcons, styles } from "./styles";
@@ -14,7 +15,7 @@ export const Footer = styled(({ className }) => {
               alignItems="center"
               justifyContent={{ xs: "center", md: "flex-start" }}
             >
-              <LogoIcon src="/assets/logo.png" alt="logo" />
+              <LogoIcon src={url("assets/logo.png")} alt="logo" />
               <Logo to="/">Delta</Logo>
             </Flex>
 
