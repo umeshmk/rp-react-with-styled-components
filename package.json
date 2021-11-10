@@ -16,6 +16,7 @@
     "react-hook-form": "^7.19.1",
     "react-icons": "^4.3.1",
     "react-intersection-observer": "^8.32.2",
+    "react-loading": "^2.0.3",
     "react-router-dom": "^5.3.0",
     "react-slick": "^0.28.1",
     "styled-components": "^5.3.3"

@@ -1,9 +1,11 @@
 import { Pricing } from "../components/pricing/Pricing";
 
-export const PricingPage = () => {
+const PricingPage = () => {
   return (
     <>
       <Pricing />
     </>
   );
 };
+
+export default PricingPage;

@@ -3,7 +3,7 @@ import { Features } from "../components/features/Features";
 import { Header } from "../components/header/Header";
 import { HeroWrapper } from "../components/hero/HeroWrapper";
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <>
       <Header />
@@ -15,3 +15,5 @@ export const HomePage = () => {
     </>
   );
 };
+
+export default HomePage;
