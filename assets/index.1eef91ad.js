@@ -162,7 +162,7 @@ import{j as w,s as r,C as m,r as g,I as W,L as j,G as _,F as z,a as F,b as D,c a
   &:active {
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.35);
   }
-`,p=e=>"/rp-react-with-styled-components/"+e,ie=m`
+`,p=e=>e==="/"?"/":"/rp-react-with-styled-components/"+e,ie=m`
   padding: 1rem 1.5rem;
   position: absolute;
   width: 100%;
@@ -267,7 +267,7 @@ import{j as w,s as r,C as m,r as g,I as W,L as j,G as _,F as z,a as F,b as D,c a
   }
 `,he=r(({className:e})=>t("div",{className:e,children:t(S,{maxWidth:"md",children:d($,{cols:{xs:"1",md:"5"},gap:"5rem",children:[d(I,{gridCol:"1/span 1",children:[d(f,{alignItems:"center",justifyContent:{xs:"center",md:"flex-start"},children:[t(R,{src:p("assets/logo.png"),alt:"logo"}),t(B,{to:"/",children:"Delta"})]}),d(me,{children:["69 Street, Delta Building, ",t("br",{}),"US Road, Los Angeles 123"]}),t($,{cols:"5",children:ae.map(({name:o,icon:a})=>t(ge,{children:t(a,{})},o))})]}),t(I,{gridCol:{md:"2/span 4"},children:t($,{cols:{xs:"2",md:"4"},gap:"2rem",children:le.map(o=>d(ce,{direction:"column",justifyContent:"space-between",children:[t("h2",{children:o.title}),t(fe,{children:o.links.map(a=>t("li",{children:a},a))})]},o.title))})})]})})}))`
   ${de}
-`,L=[{to:"/",hash:"#about",text:"About",id:"about"},{to:"/pricing",hash:"",text:"Pricing",id:"pricing"},{to:"/signup",hash:"",text:"Contact",id:"contact"}],ye=r(({className:e})=>{const[o,a]=g.exports.useState(!1),l=()=>a(!1);return t("nav",{className:e,children:d(S,{maxWidth:"md",children:[d(f,{justifyContent:"space-between",alignItems:"center",children:[d(f,{className:"logo",alignItems:"center",children:[t(R,{src:p("assets/logo.png"),alt:"logo"}),t(B,{to:"/",children:"Delta"})]}),d(f,{children:[t(ne,{size:"1.5rem",onClick:()=>a(!0)}),L.map(({id:i,text:n,to:s,hash:c})=>d(re,{children:[!c&&t(j,{to:s,children:n}),c&&t("a",{href:p(s+c),children:n})]},i))]})]}),t(oe,{className:"modal",open:o,handleClose:l,children:t(f,{direction:"column",alignItems:"center",children:L.map(({id:i,text:n,to:s,hash:c})=>d(se,{children:[!c&&t(j,{to:s,onClick:l,children:n}),c&&t("a",{href:s+c,onClick:l,children:n})]},i))})})]})})})`
+`,L=[{to:p("/"),hash:"#about",text:"About",id:"about"},{to:"/pricing",hash:"",text:"Pricing",id:"pricing"},{to:"/signup",hash:"",text:"Contact",id:"contact"}],ye=r(({className:e})=>{const[o,a]=g.exports.useState(!1),l=()=>a(!1);return t("nav",{className:e,children:d(S,{maxWidth:"md",children:[d(f,{justifyContent:"space-between",alignItems:"center",children:[d(f,{className:"logo",alignItems:"center",children:[t(R,{src:p("assets/logo.png"),alt:"logo"}),t(B,{to:"/",children:"Delta"})]}),d(f,{children:[t(ne,{size:"1.5rem",onClick:()=>a(!0)}),L.map(({id:i,text:n,to:s,hash:c})=>d(re,{children:[!c&&t(j,{to:s,children:n}),c&&t("a",{href:s+c,children:n})]},i))]})]}),t(oe,{className:"modal",open:o,handleClose:l,children:t(f,{direction:"column",alignItems:"center",children:L.map(({id:i,text:n,to:s,hash:c})=>d(se,{children:[!c&&t(j,{to:s,onClick:l,children:n}),c&&t("a",{href:s+c,onClick:l,children:n})]},i))})})]})})})`
   ${ie}
 `,xe=r(A)`
   svg {
@@ -281,7 +281,7 @@ import{j as w,s as r,C as m,r as g,I as W,L as j,G as _,F as z,a as F,b as D,c a
   height: 100vh;
   width: 100vw;
   background-color: #071c2f;
-`,ve=h.lazy(()=>C(()=>import("./ContactPage.240dc3d0.js"),["assets/ContactPage.240dc3d0.js","assets/vendor.65bf52f0.js"])),be=h.lazy(()=>C(()=>import("./HomePage.f5d12d8e.js"),["assets/HomePage.f5d12d8e.js","assets/HomePage.b32ce33a.css","assets/vendor.65bf52f0.js"])),we=h.lazy(()=>C(()=>import("./PricingPage.b29ba806.js"),["assets/PricingPage.b29ba806.js","assets/vendor.65bf52f0.js"])),je=()=>t(k,{children:d(T,{basename:"/rp-react-with-styled-components/",children:[t(ye,{}),t(g.exports.Suspense,{fallback:t(ue,{}),children:d(M,{children:[t(y,{exact:!0,path:"/pricing",children:t(we,{})}),t(y,{exact:!0,path:"/signup",children:t(ve,{})}),t(y,{exact:!0,path:"/",children:t(be,{})}),t(y,{path:"*",children:t(N,{to:"/"})})]})}),t(he,{})]})}),Ce={colors:{primary:"rebeccapurple",secondary:"green"},maxWidth:{xs:"900px",md:"1536px",lg:"100%"},media:{xs:"@media screen and (min-width: 0px)",md:"@media screen and (min-width: 900px)",lg:"@media screen and (min-width: 1536px)"}},$e=V`
+`,ve=h.lazy(()=>C(()=>import("./ContactPage.ca263977.js"),["assets/ContactPage.ca263977.js","assets/vendor.65bf52f0.js"])),be=h.lazy(()=>C(()=>import("./HomePage.207e1c22.js"),["assets/HomePage.207e1c22.js","assets/HomePage.b32ce33a.css","assets/vendor.65bf52f0.js"])),we=h.lazy(()=>C(()=>import("./PricingPage.b4c93b5d.js"),["assets/PricingPage.b4c93b5d.js","assets/vendor.65bf52f0.js"])),je=()=>t(k,{children:d(T,{basename:"/rp-react-with-styled-components/",children:[t(ye,{}),t(g.exports.Suspense,{fallback:t(ue,{}),children:d(M,{children:[t(y,{exact:!0,path:"/pricing",children:t(we,{})}),t(y,{exact:!0,path:"/signup",children:t(ve,{})}),t(y,{exact:!0,path:"/",children:t(be,{})}),t(y,{path:"*",children:t(N,{to:"/"})})]})}),t(he,{})]})}),Ce={colors:{primary:"rebeccapurple",secondary:"green"},maxWidth:{xs:"900px",md:"1536px",lg:"100%"},media:{xs:"@media screen and (min-width: 0px)",md:"@media screen and (min-width: 900px)",lg:"@media screen and (min-width: 1536px)"}},$e=V`
 html{scroll-behavior:smooth}
 body {
       /* css */
