@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "../../elements";
+import { Button, H2, Text } from "../../elements";
 
 /**
  * Styles
@@ -22,26 +22,20 @@ export const HeroBox = styled.div<{ inverse: boolean }>`
     font-weight: 800;
     color: ${(p) =>
       p.inverse ? p.theme.colors.primary.dark : p.theme.colors.grey[50]};
-    font-size: 1rem;
-  }
-  p {
-    font-weight: 400;
-    color: ${(p) =>
-      p.inverse ? p.theme.colors.grey[800] : p.theme.colors.grey[400]};
-    letter-spacing: 1px;
-    font-size: 1.1rem;
-    /* text-align: justify; */
   }
 `;
 
-export const HeroTitle = styled.h2<{ inverse: boolean }>`
+// export const HeroTitle = styled.h2<{ inverse: boolean }>`
+export const HeroTitle = styled(H2)<{ inverse: boolean }>`
   font-weight: 800;
   color: ${(p) =>
     p.inverse ? p.theme.colors.primary.main : p.theme.colors.grey[50]};
+  margin: 2rem 0;
+`;
 
-  font-size: 2.5rem;
-  font-size: clamp(2rem, 10vw, 3.2rem);
-  margin: 2rem 0 0;
+export const HeroDescription = styled(Text)<{ inverse: boolean }>`
+  color: ${(p) =>
+    p.inverse ? p.theme.colors.grey[700] : p.theme.colors.grey[100]};
 `;
 
 export const HeroButton = styled(Button)<{ inverse: boolean }>`

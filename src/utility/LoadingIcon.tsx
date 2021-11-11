@@ -27,5 +27,6 @@ export const LoadingIcon = styled(({ className }) => {
   z-index: 1000;
   height: 100vh;
   width: 100vw;
-  background-color: #071c2f;
+  background-color: ${(p) => p.theme.colors.primary.dark};
+  color: ${(p) => p.theme.colors.grey[50]};
 `;

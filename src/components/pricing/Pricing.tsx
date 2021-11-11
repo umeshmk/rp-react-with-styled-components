@@ -1,6 +1,7 @@
 import { MdBookmarkAdded } from "react-icons/md";
 import styled from "styled-components";
 import { Container, Grid, Item } from "../../elements";
+import { Subtitle, Title } from "../common";
 import { data } from "./data";
 import {
   Card,
@@ -9,16 +10,14 @@ import {
   CardPrice,
   CardTitle,
   styles,
-  Text,
-  Title,
 } from "./styles";
 
 export const Pricing = styled(({ className }) => {
   return (
     <div className={className}>
       <Container maxWidth="md">
-        <Title>Pick Your Best Option</Title>
-        <Text>Create, maintain and store your data with Delta.</Text>
+        <Title>Pick your best option</Title>
+        <Subtitle>Create, maintain and store your data with Delta.</Subtitle>
 
         <Grid cols={{ xs: "1", md: "2", lg: "4" }} gap="4rem">
           {data.map(({ features, price, title }) => (

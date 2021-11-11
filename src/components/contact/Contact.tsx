@@ -1,6 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
 import { Container, Flex } from "../../elements";
+import { Subtitle, Title } from "../common";
 import { data, Inputs } from "./data";
 import {
   Form,
@@ -8,10 +9,8 @@ import {
   Input,
   InputSubmit,
   styles,
-  Text,
   TextError,
   TextSuccess,
-  Title,
 } from "./styles";
 import { validationResolver } from "./validate";
 
@@ -33,7 +32,7 @@ export const Contact = styled(({ className }) => {
     <Flex className={className} justifyContent="center">
       <Container maxWidth="xs">
         <Title>Sign Up</Title>
-        <Text>Create, maintain and store your data with Delta.</Text>
+        <Subtitle>Create, maintain and store your data with Delta.</Subtitle>
 
         <Form onSubmit={handleSubmit(onSubmit)}>
           {isSubmitSuccessful && (
@@ -50,7 +49,6 @@ export const Contact = styled(({ className }) => {
             </div>
           ))}
           <InputSubmit value="Submit" disabled={!isValid} />
-          {/* <InputSubmit value="Submit" /> */}
         </Form>
       </Container>
     </Flex>

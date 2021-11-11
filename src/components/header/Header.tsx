@@ -21,7 +21,6 @@ export const Header = styled(({ className }) => {
           alignItems="center"
         >
           <HeaderTitle>Your data is secure with us</HeaderTitle>
-
           <HeaderPara>
             We provide the best security systems for clients all over the world
           </HeaderPara>

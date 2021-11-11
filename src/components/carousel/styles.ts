@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import styled, { css } from "styled-components";
-import { Button, Flex } from "../../elements";
+import { Button, Flex, H2 } from "../../elements";
 
 export const styles = css`
   ${(p) => p.theme.media.xs} {
@@ -14,8 +14,7 @@ export const styles = css`
   }
 `;
 
-export const Title = styled.h2`
-  font-size: 4rem;
+export const Title = styled(H2)`
   margin: 2rem auto;
   color: ${(p) => p.theme.colors.primary.main};
   ${(p) => p.theme.media.xs} {
@@ -27,11 +26,11 @@ export const Title = styled.h2`
 `;
 
 export const SlickItem = styled(Flex)`
-  height: 30rem;
+  height: 33rem;
   padding: 1rem;
   overflow: hidden;
   > div:first-child {
-    height: 27rem;
+    height: 30rem;
     border: 1px solid #0003;
     border-radius: 1rem 1rem 0 0;
     overflow: hidden;
@@ -46,26 +45,27 @@ export const SlickItemImg = styled.img`
 
 export const SlickItemText = styled.div`
   padding: 1rem;
-  h3 {
+  text-align: center;
+  h5 {
     color: ${(p) => p.theme.colors.primary.dark};
-    text-align: center;
+    margin-bottom: 1rem;
   }
   p {
     color: ${(p) => p.theme.colors.grey[800]};
     /* letter-spacing: 1px; */
     font-weight: 300;
-    text-align: justify;
   }
 `;
 
 export const LearnButton = styled(Button)`
   padding: 1rem;
-  color: ${(p) => p.theme.colors.primary.light};
+  /* color: ${(p) => p.theme.colors.primary.light}; */
+  color: ${(p) => p.theme.colors.grey[300]};
   background-color: ${(p) => p.theme.colors.primary.dark};
   width: 100%;
   border-radius: 0 0 1rem 1rem;
   :hover {
-    color: ${(p) => p.theme.colors.primary.light};
+    color: ${(p) => p.theme.colors.grey[100]};
     opacity: 0.9;
   }
   :active {

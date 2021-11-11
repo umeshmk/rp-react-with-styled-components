@@ -6,19 +6,24 @@
     "prefix": "$p - theme",
     "body": "${(p) => p.theme.${0}};"
   },
+  "$typography": {
+    "scope": "css",
+    "prefix": "$p : typography",
+    "body": "${(p) => p.theme.typography${0}};"
+  },
   "$colors": {
     "scope": "css",
-    "prefix": "$p - colors",
+    "prefix": "$p : colors",
     "body": "${(p) => p.theme.colors.${0}};"
   },
   "$primary": {
     "scope": "css",
-    "prefix": "$p - primary",
+    "prefix": "$p : primary",
     "body": "${(p) => p.theme.colors.primary.${0}};"
   },
   "$grey": {
     "scope": "css",
-    "prefix": "$p - grey",
+    "prefix": "$p : grey",
     "body": "${(p) => p.theme.colors.grey[${0}]};"
   }
 }

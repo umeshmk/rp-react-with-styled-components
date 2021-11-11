@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Flex } from "../../elements";
+import { Flex, H5, Text } from "../../elements";
 
 /**
  * Styles
@@ -10,10 +10,8 @@ export const styles = css`
   text-align: center;
   padding: 5vh;
   padding-bottom: 15vh;
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 15vh;
-    text-transform: capitalize;
+  h2 {
+    margin: 5vh auto 10vh;
   }
 `;
 
@@ -22,11 +20,7 @@ export const FeatureBox = styled(Flex)`
   padding: 2rem 1rem;
   box-shadow: 0 0 10px 1px ${(p) => p.theme.colors.primary.light};
   color: ${(p) => p.theme.colors.grey[900]};
-  p {
-    color: ${(p) => p.theme.colors.grey[500]};
-    letter-spacing: 1px;
-    font-weight: 600;
-  }
+
   svg {
     color: ${(p) => p.theme.colors.primary.main};
     border: 1px solid;
@@ -36,6 +30,10 @@ export const FeatureBox = styled(Flex)`
   }
 `;
 
-export const FeatureTitle = styled.h2`
-  font-size: 1.5rem;
+export const FeatureTitle = styled(H5)`
+  margin: 1rem auto 2rem;
+`;
+
+export const FeatureText = styled(Text)`
+  font-weight: ${(p) => p.theme.typography.fontWeightLight};
 `;

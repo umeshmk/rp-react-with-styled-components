@@ -1,5 +1,6 @@
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import styled, { css } from "styled-components";
+import { Text } from "../../elements";
 
 export const styles = css`
   min-height: 100vh;
@@ -8,40 +9,19 @@ export const styles = css`
   padding: 10rem 2rem;
 `;
 
-export const Title = styled.h1`
-  font-size: 4rem;
-  margin: 0;
-  padding-bottom: 1rem;
-  color: ${(p) => p.theme.colors.grey[100]};
-  text-align: center;
-`;
-
-export const Text = styled.p`
-  font-size: 1.2rem;
-  color: ${(p) => p.theme.colors.primary.light};
-  margin-bottom: 3rem;
-  text-align: center;
-`;
-
-export const TextError = styled.p`
-  font-size: 1rem;
-  font-weight: 600;
+export const TextError = styled(Text)`
   color: ${(p) => p.theme.colors.primary.dark};
-  margin: 0;
-  padding: 0;
   padding-bottom: 1rem;
 `;
+
 export const TextSuccess = styled(TextError)`
-  color: ${(p) => p.theme.colors.primary.dark};
-  font-weight: 600;
-  text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.6em;
+  font-weight: ${(p) => p.theme.typography.fontWeightMedium};
 `;
+
 export const IconSuccess = styled(IoCheckmarkDoneCircle)`
   color: ${(p) => p.theme.colors.primary.dark};
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Form = styled.form`

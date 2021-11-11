@@ -1,5 +1,6 @@
 import { DefaultTheme } from "styled-components";
 import { grey, lightBlue } from "./materialColors";
+import { typography } from "./typography";
 
 export const theme: DefaultTheme = {
   colors: {
@@ -12,6 +13,8 @@ export const theme: DefaultTheme = {
       dark: lightBlue[900],
     },
   },
+  typography: typography,
+
   // Breakpoints - from mui
   maxWidth: {
     xs: "900px",

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Flex, LinkButton } from "../../elements";
+import { Flex, H4, H5, LinkButton } from "../../elements";
 
 export const styles = css`
   min-height: 100vh;
@@ -9,21 +9,6 @@ export const styles = css`
   ${(p) => p.theme.media.md} {
     padding: 7rem 5rem;
   }
-`;
-
-export const Title = styled.h1`
-  font-size: 4rem;
-  margin: 0;
-  padding-bottom: 1rem;
-  color: ${(p) => p.theme.colors.grey[100]};
-  text-align: center;
-`;
-
-export const Text = styled.p`
-  font-size: 1.2rem;
-  color: ${(p) => p.theme.colors.primary.light};
-  margin-bottom: 3rem;
-  text-align: center;
 `;
 
 export const Card = styled(Flex)`
@@ -39,22 +24,18 @@ export const Card = styled(Flex)`
   }
 `;
 
-export const CardTitle = styled.h2`
-  font-size: 2.2rem;
+export const CardTitle = styled(H4)`
   color: ${(p) => p.theme.colors.primary.dark};
-  margin: 0;
-  padding: 0;
+  font-weight: ${(p) => p.theme.typography.fontWeightBold}; ;
 `;
 
-export const CardPrice = styled.h3`
-  font-size: 1.3rem;
+export const CardPrice = styled(H5)`
   color: ${(p) => p.theme.colors.primary.dark};
   padding-bottom: 1rem;
 `;
 
 export const CardFeatures = styled.ul`
-  font-size: 1rem;
-  font-weight: 500;
+  font-weight: ${(p) => p.theme.typography.fontWeightBold};
   list-style: none;
   padding: 0;
   color: ${(p) => p.theme.colors.primary.dark};

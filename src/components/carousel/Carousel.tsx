@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import ReactSlickClass from "react-slick";
 import styled from "styled-components";
-import { Container, Grid, GridItem, Item } from "../../elements";
+import { Container, Grid, GridItem, H5, Item, Text } from "../../elements";
 import { data, sliderSettings } from "./data";
 import "./slick.min.css";
 import {
@@ -45,8 +45,8 @@ export const Carousel = styled(({ className }) => {
               <Item>
                 <SlickItemImg src={image} alt={title} />
                 <SlickItemText>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
+                  <H5>{title}</H5>
+                  <Text>{description}</Text>
                 </SlickItemText>
               </Item>
               <Item>

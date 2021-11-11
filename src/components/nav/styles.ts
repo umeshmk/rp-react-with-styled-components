@@ -54,7 +54,7 @@ export const NavLink = styled.div`
     display: none;
     color: ${(p) => p.theme.colors.grey[300]};
     margin-left: 3rem;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     text-decoration: none;
     text-transform: capitalize;
     transition: color 0.1s;
@@ -69,11 +69,9 @@ export const NavLink = styled.div`
 `;
 
 export const ModalLink = styled.div`
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   a {
     color: ${(p) => p.theme.colors.grey[300]};
-    font-size: 1.6rem;
-    font-weight: 600;
     text-decoration: none;
     text-transform: capitalize;
     transition: color 0.2s;

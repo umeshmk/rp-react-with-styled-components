@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Container, Flex, Modal } from "../../elements";
+import { Container, Flex, H5, Modal, Text } from "../../elements";
 import { url } from "../../utility/url";
 import {
   LinksIcon,
@@ -47,14 +47,15 @@ export const Nav = styled(({ className }) => {
             <LogoIcon src={url("assets/logo.png")} alt="logo" />
             <Logo to="/">Delta</Logo>
           </Flex>
-
           <Flex>
             <LinksIcon size="1.5rem" onClick={() => setOpenModal(true)} />
             {links.map(({ id, text, to, hash }) => (
               <NavLink key={id}>
-                {!hash && <Link to={to}>{text}</Link>}
-                {/* {hash && <Link to={{ pathname: to, hash: hash }}>{text}</Link>} */}
-                {hash && <a href={to + hash}>{text}</a>}
+                <Text>
+                  {!hash && <Link to={to}>{text}</Link>}
+                  {/* {hash && <Link to={{ pathname: to, hash: hash }}>{text}</Link>} */}
+                  {hash && <a href={to + hash}>{text}</a>}
+                </Text>
               </NavLink>
             ))}
           </Flex>
@@ -65,16 +66,18 @@ export const Nav = styled(({ className }) => {
           <Flex direction="column" alignItems="center">
             {links.map(({ id, text, to, hash }) => (
               <ModalLink key={id}>
-                {!hash && (
-                  <Link to={to} onClick={closeModal}>
-                    {text}
-                  </Link>
-                )}
-                {hash && (
-                  <a href={to + hash} onClick={closeModal}>
-                    {text}
-                  </a>
-                )}
+                <H5>
+                  {!hash && (
+                    <Link to={to} onClick={closeModal}>
+                      {text}
+                    </Link>
+                  )}
+                  {hash && (
+                    <a href={to + hash} onClick={closeModal}>
+                      {text}
+                    </a>
+                  )}
+                </H5>
               </ModalLink>
             ))}
           </Flex>

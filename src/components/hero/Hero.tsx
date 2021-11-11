@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { Container, Flex, Item } from "../../elements";
+import { Container, Flex, Item, Text } from "../../elements";
 import { HeroType } from "./data";
-import { HeroBox, HeroButton, HeroImg, HeroTitle } from "./styles";
+import {
+  HeroBox,
+  HeroButton,
+  HeroDescription,
+  HeroImg,
+  HeroTitle,
+} from "./styles";
 
 const framer = (trigger: boolean) => ({
   initial: {
@@ -65,9 +71,13 @@ export const Hero: React.FC<{ data: HeroType }> = ({ data }) => {
                 }}
                 justifyContent={{ md: "center" }}
               >
-                <small>{topText}</small>
+                <Text>
+                  <small>{topText}</small>
+                </Text>
                 <HeroTitle inverse={inverseColor}>{title}</HeroTitle>
-                <p>{description}</p>
+                <HeroDescription inverse={inverseColor}>
+                  {description}
+                </HeroDescription>
                 <HeroButton inverse={inverseColor}>{buttonLabel}</HeroButton>
               </Flex>
             </Flex>

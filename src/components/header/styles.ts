@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { LinkButton } from "../../elements";
+import { Subtitle, Title } from "../common";
 
 /**
  * Styles
@@ -7,6 +8,7 @@ import { LinkButton } from "../../elements";
 export const styles = css`
   height: 100vh;
   color: ${(p) => p.theme.colors.grey[50]};
+  background-color: ${(p) => p.theme.colors.primary.dark + "80"};
   padding: 0 2rem;
 
   section {
@@ -31,33 +33,28 @@ export const BackgroundVideo = styled.video`
   object-fit: cover;
 `;
 
-export const HeaderTitle = styled.h1`
-  font-size: clamp(2.3rem, 6vw, 4.5rem);
-  text-transform: capitalize;
-  margin: 0;
-  letter-spacing: 4px;
-  word-spacing: 7px;
-  /* text-align: justify; */
+export const HeaderTitle = styled(Title)`
+  padding: 1rem 0 0;
+  ${(p) => p.theme.media.md} {
+    padding: 0 3rem;
+  }
 `;
 
-export const HeaderPara = styled.p`
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
-  text-transform: capitalize;
-  /* font-weight: 300; */
-  color: ${(p) => p.theme.colors.grey[500]};
-
-  /* media - xs */
+export const HeaderPara = styled(Subtitle)`
   ${(p) => p.theme.media.xs} {
-    margin: 1.5rem 0 5rem 0;
+    margin: 0.5rem 0 5rem 0;
   }
-
-  /* media - md */
   ${(p) => p.theme.media.md} {
-    margin: 1.5rem 0 3rem 0;
+    margin: 0.5rem 0 5rem 0;
   }
 `;
 
 export const HeaderButton = styled(LinkButton)`
   padding: 0.8rem;
-  margin: auto 1rem;
+  margin: 1rem;
+  background-color: ${(p) => p.theme.colors.primary.dark};
+  color: ${(p) => p.theme.colors.grey[300]};
+  ${(p) => p.theme.media.md} {
+    /* margin: auto 1rem; */
+  }
 `;

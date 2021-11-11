@@ -1,25 +1,37 @@
 import styled, { css } from "styled-components";
-import { Flex } from "../../elements";
+import { Flex, H5, Text } from "../../elements";
 
 export const styles = css`
   background-color: ${(p) => p.theme.colors.primary.dark};
   padding: 5rem 1rem;
+
   .logo {
     padding: 1rem;
   }
 
   ${(p) => p.theme.media.md} {
-    padding: 5rem;
+    padding: 5rem 0rem;
+    .logo {
+      padding: 0rem;
+      padding-left: 1rem;
+    }
+    .container {
+      /* padding: 5rem; */
+    }
+  }
+`;
+
+export const Address = styled.address`
+  color: ${(p) => p.theme.colors.grey[400]};
+  color: ${(p) => p.theme.colors.primary.light};
+  padding-top: 1rem;
+  text-align: center;
+  ${(p) => p.theme.media.md} {
+    text-align: left;
   }
 `;
 
 export const LinksGroup = styled(Flex)`
-  h2 {
-    color: ${(p) => p.theme.colors.primary.light};
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
   ${(p) => p.theme.media.xs} {
     text-align: center;
   }
@@ -28,32 +40,26 @@ export const LinksGroup = styled(Flex)`
   }
 `;
 
+export const LinksTitle = styled(Text)`
+  color: ${(p) => p.theme.colors.primary.light};
+  margin: 0rem 0;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: ${(p) => p.theme.typography.fontWeightBold}; ;
+`;
 export const Links = styled.ul`
-  color: ${(p) => p.theme.colors.grey[300]};
-  font-size: 1.1rem;
+  color: ${(p) => p.theme.colors.grey[400]};
   font-weight: 300;
   list-style: none;
   padding: 0;
   li {
     padding-bottom: 0.5rem;
   }
-  span {
+  p {
     cursor: pointer;
     :hover {
       color: ${(p) => p.theme.colors.grey[100]};
     }
-  }
-`;
-
-export const Address = styled.address`
-  color: ${(p) => p.theme.colors.primary.light};
-  font-size: 1.2rem;
-  font-weight: 800;
-  padding-top: 1.2rem;
-  line-height: 1.8rem;
-  text-align: center;
-  ${(p) => p.theme.media.md} {
-    text-align: left;
   }
 `;
 
@@ -66,5 +72,6 @@ export const SocialIcons = styled.div`
   }
   ${(p) => p.theme.media.md} {
     text-align: left;
+    padding-right: 2rem;
   }
 `;

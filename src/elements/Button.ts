@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 export const styles = css`
+  font-weight: ${(p) => p.theme.typography.button.fontWeight};
+  font-size: ${(p) => p.theme.typography.button.fontSize};
+  line-height: ${(p) => p.theme.typography.button.lineHeight};
+  letter-spacing: ${(p) => p.theme.typography.button.letterSpacing};
   display: inline-block;
   padding: 0.35em 1.2em;
   border: none;
@@ -14,8 +18,6 @@ export const styles = css`
   color: ${(p) => p.theme.colors.primary.dark};
   cursor: pointer;
   text-transform: uppercase;
-  font-size: clamp(0.8rem, 0.9rem, 1.2rem);
-  font-weight: 600;
   &:hover {
     background-color: ${(p) => p.theme.colors.primary.dark};
     color: ${(p) => p.theme.colors.grey[50]};
