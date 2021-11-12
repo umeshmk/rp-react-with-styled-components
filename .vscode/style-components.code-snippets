@@ -6,6 +6,11 @@
     "prefix": "$p - theme",
     "body": "${(p) => p.theme.${0}};"
   },
+  "$media": {
+    "scope": "css",
+    "prefix": "$p - media",
+    "body": "${(p) => p.theme.media.${0}};"
+  },
   "$typography": {
     "scope": "css",
     "prefix": "$p : typography",

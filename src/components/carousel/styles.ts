@@ -12,6 +12,9 @@ export const styles = css`
   ${(p) => p.theme.media.lg} {
     padding: 5rem 20vw;
   }
+  ${(p) => p.theme.media.xsLandscape} {
+    padding: 4rem;
+  }
 `;
 
 export const Title = styled(H2)`

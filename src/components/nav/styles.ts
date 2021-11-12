@@ -12,7 +12,7 @@ export const styles = css`
   background: transparent;
   z-index: 10;
   .logo {
-    z-index: 200;
+    /* z-index: 200; */
   }
   .modal {
     background-color: ${(p) => p.theme.colors.primary.dark};

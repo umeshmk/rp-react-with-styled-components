@@ -36,6 +36,9 @@ export const Form = styled.form`
   ${(p) => p.theme.media.lg} {
     width: 30vw;
   }
+  ${(p) => p.theme.media.xsLandscape} {
+    width: 60vw;
+  }
 `;
 
 export const Input = styled.input`

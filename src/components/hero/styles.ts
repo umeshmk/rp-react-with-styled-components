@@ -17,6 +17,10 @@ export const HeroBox = styled.div<{ inverse: boolean }>`
       padding: 10rem 0rem;
       text-align: left;
     }
+
+    ${(p) => p.theme.media.xsLandscape} {
+      padding: 5rem 7rem;
+    }
   }
   small {
     font-weight: 800;

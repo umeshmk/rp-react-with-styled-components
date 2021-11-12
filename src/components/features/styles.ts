@@ -13,6 +13,10 @@ export const styles = css`
   h2 {
     margin: 5vh auto 10vh;
   }
+
+  ${(p) => p.theme.media.xsLandscape} {
+    padding: 5rem;
+  }
 `;
 
 export const FeatureBox = styled(Flex)`

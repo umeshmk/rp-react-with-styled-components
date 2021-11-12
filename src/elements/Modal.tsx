@@ -39,7 +39,7 @@ export const Modal = styled(Body)`
       opacity: 1;
     }
   }
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   min-height: 100vh;
@@ -47,6 +47,7 @@ export const Modal = styled(Body)`
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.5s;
+  overflow: hidden;
   .close {
     position: absolute;
     top: 0;

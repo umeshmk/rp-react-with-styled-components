@@ -19,6 +19,10 @@ export const styles = css`
       /* padding: 5rem; */
     }
   }
+
+  ${(p) => p.theme.media.xsLandscape} {
+    padding: 4rem;
+  }
 `;
 
 export const Address = styled.address`

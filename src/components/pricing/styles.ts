@@ -22,6 +22,10 @@ export const Card = styled(Flex)`
       transform: scale(1.05);
     }
   }
+
+  ${(p) => p.theme.media.xsLandscape} {
+    margin: 5rem;
+  }
 `;
 
 export const CardTitle = styled(H4)`

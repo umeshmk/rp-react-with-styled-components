@@ -6,12 +6,17 @@ import { Subtitle, Title } from "../common";
  * Styles
  */
 export const styles = css`
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
   color: ${(p) => p.theme.colors.grey[50]};
   background-color: ${(p) => p.theme.colors.primary.dark + "80"};
   padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   section {
+    padding: 5px;
     height: 100%;
   }
   .content {
@@ -20,6 +25,9 @@ export const styles = css`
   }
   button {
     /* margin: auto 1rem; */
+  }
+  ${(p) => p.theme.media.xsLandscape} {
+    padding: 4rem;
   }
 `;
 

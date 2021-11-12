@@ -39,6 +39,7 @@ declare module "styled-components" {
       xs: string;
       md: string;
       lg: string;
+      xsLandscape: string;
     };
     maxWidth: {
       xs: string;
